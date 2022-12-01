@@ -14,6 +14,12 @@ namespace TakeHome
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
 			routes.MapRoute(
+				name: "Feedback",
+				url: "Feedback",
+				defaults: new { controller = "Feedback", action = "Feedback" }
+			);
+
+			routes.MapRoute(
 					name: "Default",
 					url: "{controller}/{action}/{id}",
 					defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
